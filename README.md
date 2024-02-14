@@ -5,6 +5,8 @@ This is a project template for building modern web applications that comes pre c
 - Next app router
 - Tailwind css
 - Next Auth
+- ESLint
+- Prettier
 
 > Thanks to the [NextAuth](https://github.com/nextauthjs/next-auth-example) team for providing the foundation for this template.
 
