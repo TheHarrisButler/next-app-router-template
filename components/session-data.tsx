@@ -1,4 +1,4 @@
-import type { Session } from "next-auth"
+import type { Session } from "next-auth";
 
 export default function SessionData({ session }: { session: Session | null }) {
   if (session?.user) {
@@ -20,12 +20,12 @@ export default function SessionData({ session }: { session: Session | null }) {
         )}
         <pre>{JSON.stringify(session, null, 2)}</pre>
       </div>
-    )
+    );
   }
 
   return (
     <p>
       No session data, please <em>Sign In</em> first.
     </p>
-  )
+  );
 }
