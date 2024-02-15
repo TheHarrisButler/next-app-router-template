@@ -8,8 +8,6 @@ This is a project template for building modern web applications that comes pre c
 - ESLint
 - Prettier
 
-> Thanks to the [NextAuth](https://github.com/nextauthjs/next-auth-example) team for providing the foundation for this template.
-
 ## Getting Started
 
 ### 1. Configure your local environment
