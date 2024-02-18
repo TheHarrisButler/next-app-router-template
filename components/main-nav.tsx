@@ -21,7 +21,7 @@ export function MainNav() {
     <div className="flex items-center space-x-2 lg:space-x-6">
       <CustomLink href="/">
         <Button variant="ghost" className="p-0">
-          <Image src="/logo.png" alt="Home" width="32" height="32" />
+          <Image src="/logo.png" alt="Home" width="40" height="40" />
         </Button>
       </CustomLink>
       <NavigationMenu>
@@ -43,10 +43,7 @@ export function MainNav() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink
-              href="/client-example"
-              className={navigationMenuTriggerStyle()}
-            >
+            <NavigationMenuLink href="/client-example" className={navigationMenuTriggerStyle()}>
               Client Side
             </NavigationMenuLink>
           </NavigationMenuItem>
@@ -56,28 +53,25 @@ export function MainNav() {
   );
 }
 
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="text-sm leading-snug line-clamp-2 text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
+const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a">>(
+  ({ className, title, children, ...props }, ref) => {
+    return (
+      <li>
+        <NavigationMenuLink asChild>
+          <a
+            ref={ref}
+            className={cn(
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              className
+            )}
+            {...props}
+          >
+            <div className="text-sm font-medium leading-none">{title}</div>
+            <p className="text-sm leading-snug line-clamp-2 text-muted-foreground">{children}</p>
+          </a>
+        </NavigationMenuLink>
+      </li>
+    );
+  }
+);
 ListItem.displayName = "ListItem";
