@@ -1,6 +1,5 @@
 export { auth as middleware } from "auth";
 
-// Read more: https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher
 export const config = {
   /*
    * Match all request paths except for the ones starting with:
